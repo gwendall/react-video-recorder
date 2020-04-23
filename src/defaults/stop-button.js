@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Button = styled.button`
-  background: ${props => props.backgroundColor};
-  color: ${props => props.color};
+  background: ${(props) => props.backgroundColor};
+  color: ${(props) => props.color};
   border-radius: 4px;
   width: 40px;
   height: 40px;
@@ -16,22 +16,23 @@ const Button = styled.button`
   :hover {
     background: #fb6d42;
   }
-`
+`;
 
 const Border = styled.div`
   background: rgba(255, 255, 255, 0.4);
   height: 80px;
   width: 80px;
   border-radius: 50%;
-`
+`;
 
 Button.defaultProps = {
-  color: 'black',
-  backgroundColor: 'white'
-}
+  color: "black",
+  backgroundColor: "white",
+  type: "button",
+};
 
-export default props => (
+export default (props) => (
   <Border>
     <Button {...props} />
   </Border>
-)
+);
